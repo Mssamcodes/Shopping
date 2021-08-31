@@ -1,0 +1,150 @@
+/* SIDEBAR CHECKOUT BEGINS... source:https://codyhouse.co/gem/side-shopping-cart/ */
+
+/* SIDEBAR CHECKOUT ENDS*/
+
+
+
+
+
+/* Flex Container BEGINS */
+.flex{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.flex > section{
+  display: contents;
+    align-items:center;
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    top: 50px; /*moved grid to the bottom*/
+    max-width: 400px;
+}
+  
+.flex > section > p{
+    flex-grow: 1;
+}
+
+/*This rule ist just because of the responsive images */
+@media (max-width: 160px){
+    .flex > section {
+        max-width: 250px;
+    }
+}
+
+.flex ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex aside{
+    width: 100%
+}
+
+/* Basic styling for UI */
+body {
+    font-family: 16px 'Open Sans Condensed', sans-serif;
+    margin: 0;
+  }
+
+  img{
+      width: 380px;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+
+  @media (max-width: 1300px){
+      img{
+          width: 250px;
+      }
+  }
+
+  img:hover{
+    -moz-box-shadow: 0 0 10px #ccc;
+      -webkit-box-shadow: 0 0 10px #ccc;
+      box-shadow: 0 0 10px #ccc;
+  }
+
+  .product-name{
+    font-size: 14px;
+    color: black;
+    position: relative;
+    left: -95px;
+    bottom: -10px;
+  }
+
+  .product-price{
+    font-size: 14px;
+    color: darkslategray;
+    position: relative;
+    top: 1px;
+  }
+  
+.flex > section {
+background: white;
+padding: 1em;
+margin: 0.5em;
+border-radius: 4px;
+}  
+
+.btn{
+    background: whitesmoke;
+    color: black;
+    background-repeat: no-repeat;
+    background-position: 2em 50%;
+    background-size: 2em;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    padding: 1.5em 3em;
+    padding-left: 2.5em; /*moves text inside of button */
+    text-transform: block;
+    width: 400px;
+}
+
+.btn:hover{
+background-color:gainsboro;
+background-size: 3em;
+background-position: 1.5em 50%;
+}
+
+
+form.add-to-cart div {
+  position: relative;
+	text-align: center;
+  top: -20px;
+  left: -146px;
+  color: darkslategray;
+}
+
+form input.qty {
+	width: 30px;
+	border: 1px solid #eee;
+  font-family:'Open Sans Condensed', sans-serif;
+	color: black;
+	border-radius: 3px;
+	margin-left: 0.4em;
+  font-size: 14px;
+}
+
+
+.flex ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.flex li {
+    color: darkslategray;
+    font-weight: 2;
+    padding: 0.3em 0.6em;
+    border-radius: 1em;
+  }
+/* Flex Container ENDS */
