@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Google font for the sidebar-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+
+
+<!--Google font for the header-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+
+<!--Source for sidebar: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav-->
+
+<!--Source for Bootstrap/JS Carousel: https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_ref_js_carousel2&stacked=h-->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!--Link to use src w/out script tag:http://web.simmons.edu/~grabiner/comm244/weeknine/including-javascript.html#:~:text=To%20include%20an%20external%20JavaScript%20file%2C%20we%20can%20use%20the,path%20to%20your%20JavaScript%20file.&text=This%20script%20tag%20should%20be,tags%20in%20your%20HTML%20document.-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<style>
+
+html,body{
+  width: 100%;
+  height: auto;
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+  font-family:'Open Sans Condensed', sans-serif;
+}
+
+
+
+#header1{
+  display: flex;
+  justify-content:center;
+  position: relative;
+  top: 35px;
+
+}
+
+
+#header2{
+position: relative;
+top: -50px;
+right:-1080px;
+}
+
+#header2:hover::after{
+  color:pink;
+}
+
+.sidenav{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+  .sidenav a { /*text inside of navbar*/
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color:rgb(222, 229, 233);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+span{ /*to move nav bar open tab*/
+  position: relative;
+  right: -30px;
+  color:#696969;
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/*Carousel slider BEGINS UPDATE*/
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+  }
+
+#myCarousel {
+    width: 100%;
+}
+.carousel-control {
+    margin-top: 20px;
+}
+.carousel-inner .item {
+    width: 100%;
+    height: 700px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.carouselslide{
+  position: relative;
+  top: -60px;
+}
+
+
+.carousel-indicators{ /*to move slick nav dots*/
+  position: absolute;
+  top: 570px;
+  color: red;
+}
+
+
+
+/* Source for stock photos, credit later: https://unsplash.com/s/photos/jewerly */
+.ad0 {
+    background: url(../jewleryphotos/j3.jpg) no-repeat center center fixed; 
+
+}
+.ad1 {
+    background: url(../jewleryphotos/j1.jpg) no-repeat center center fixed; 
+}
+.ad2 {
+    background: url(../jewleryphotos/j2.jpg) no-repeat center center fixed; 
+}
+
+.ad3 {
+    background: url(../jewleryphotos/j0.jpg) no-repeat center center fixed; 
+}
+
+.ad4 {
+    background: url(../jewleryphotos/j4.jpg) no-repeat center center fixed; 
+}
+
+.fa{
+position: relative;
+display: flex;
+color: #282828;
+font-size: 500px;
+position: relative;
+top: 35px;
+right: -35px;
+padding: 15px;
+}
+
+/*CSS for the Popup-Form BEGINS */
+
+form-container h1{
+font-family:'Open Sans Condensed', sans-serif;
+position: relative;
+top: -50px;
+}
+
+.form-container p{
+font-family:'Open Sans Condensed', sans-serif;
+}
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color:black;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 200px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 110px;
+  left: 250px;
+  height: 70px;
+  width: 200px;
+  font-size: 16px;
+}
+
+.open-button:hover{
+background-color:#202020;
+}
+
+.close-btn{
+-webkit-appearance: none;
+position: relative;
+top: -260px;
+right: -120px;
+background-color: transparent;
+border: none;
+size: 50px;
+font-size: 30px;
+cursor: pointer;
+}
+
+ .form-popup{
+  display: none;
+  position: absolute;
+  text-align: center; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 2px;
+  overflow-x: hidden;
+  border: 3px solid #f1f1f1;
+}
+
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 600px;
+  padding: 30px;
+  background-color: white;
+  overflow-y: auto
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  position: absolute;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  outline: none;
+  border: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container h1{
+    position: relative;
+    top: 30px;
+}
+
+.form-container p{
+    position: relative;
+    top: 40px;
+}
+
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.close-btn:hover{
+    color: silver;
+}
+
+
+#email{
+  border: none;
+  position:relative;
+  right: -20px;
+  top: 30px;
+  font-size: 15px;
+}
+
+
+hr{
+  border: solid 1px;; 
+  position: relative;
+  top: -70px;
+  right: 40px;
+  width: 180px;
+}
+
+.submit-btn{
+  position: relative;
+  right: -100px;
+  top: -35px;
+  width: 70px;
+  font-size: 12px;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+}
+
+.submit-btn:hover{
+background-color:#202020;
+
+}
+
+/*CSS for the Popup-Form ENDS */
+
+</style>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Rings</a>
+        <br>
+        <a href="#">Earings</a>
+        <br>
+        <a href="#">Necklaces</a>
+        <br>
+        <a style="color:red"; href="#">Sale</a>
+        <br>
+        <a href="#">About Us</a>
+        <br>
+        <a href="#">Sign In</a>
+        <br>
+        <a href="#">Order Policy</a>
+    <!--Font Aweseome Icons Source to Icons: https://fontawesome.com/v4.7.0/icons/-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <div id="icons">
+    <td href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></td> 
+    <td href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></td>
+    <td href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></td>
+  </div>
+    </div>
+ <!--Hashtag links to fonts not working + Add a hover***-->
+   
+<!--Headers-->
+  <h2 id="header1" style="font-family: 'Raleway', sans-serif;">Joel Jewelers</h2>
+
+  <!--Header Icon, Hashtag is not working + Add a hover-->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <div id="header2">
+    <a href="#" class="fa fa-search fa-2x" aria-hidden="true"></a>
+    <a href="#" class="fa fa-user-o fa-2x" aria-hidden="true"></a>
+    <a href="#" class="fa fa-shopping-cart fa-2x" aria-hidden="true"></a>
+  </div>
+
+
+
+    <span style="font-size:40px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    
+    <!--Carousel BEGINGS-->
+<div class="container">
+    <br>
+    <div id="myCarousel" class="carouselslide" data-ride="carousel">
+        <!--Indicators-->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li> <!--The HTML <ol> element represents an ordered list of items — typically rendered as a numbered list-->
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <!--Wrapper for slides-->
+    <div class="carousel-inner" role="listbox">
+
+        <div class="item active ad0">
+              <!-- <img src="jewleryphotos/j3.jpg"  
+          alt="Chania" width="1000px" height="345"> -->
+          <div class="carousel-caption" style="height: 200px;" >
+            <!--HIDE CAPTION FOR NOW <h3> Ad0 </h3> -->
+          </div>
+        </div>
+  
+        <div class="item ad1">
+          <!-- <img src="jewleryphotos/j1.jpg" 
+          alt="Chania" width="460" height="345"> -->
+          <div class="carousel-caption" style="height: 200px;" >
+        <!--HIDE CAPTION FOR NOW  <h3>Ad1</h3> -->
+          </div>
+        </div>
+      
+        <div class="item ad2">
+       <!--  <img src="jewleryphotos/j2.jpg" 
+          alt="Flower" width="460" height="345"> -->
+          <div class="carousel-caption" style="height: 200px;" >
+      <!--HIDE CAPTION FOR NOW <h3>Ad2</h3> -->
+          </div>
+        </div>
+  
+        <div class="item ad3">
+      <!-- <img src="jewleryphotos/j0.jpg" 
+          alt="Flower" width="460" height="345"> -->
+          <div class="carousel-caption" style="height: 200px;" >
+      <!--HIDE CAPTION FOR NOW <h3>Ad3</h3> -->
+          </div>
+        </div>
+        <div class="item ad4">
+        <!-- <img src="jewleryphotos/j4.jpg" 
+            alt="Flower" width="460" height="345"> -->
+            <div class="carousel-caption" style="height: 200px;" >
+        <!--HIDE CAPTION FOR NOW <h3>Ad4</h3> -->
+            </div>
+          </div>
+      </div>
+<!-- Left and right controls -->
+<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="display:none";>
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" ></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="display:none";>
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+    <!--Carousel ENDS-->
+
+
+    <!--Source for an Popup form: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_popup_form  -->
+    
+    <button class="open-button" onclick="openForm()">Click Here for 20% Off !</button>
+
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container"> <!-- action="/action_page.php" means:It means when you submit the form, the script in action_page.php is run. -->
+            <h1>Get 20% Off <br>your First Purchase</h1>
+        <br>
+   <p>Be <i>in the know</i> of new jewlery collections, newsletters, sales and more.</p>
+            <label for="email"></label> 
+            <input type="text" placeholder="Enter Your Email" name="email" id="email" required>
+
+            <button type="submit" class="submit-btn" onclick="return foo();">Submit</button> <!--For popup after submit button it clicked-->
+            <button type="button" class="close-btn" onclick="closeForm()">X</button>
+
+            <hr></hr>
+
+        </form>
+    </div>
+
+
+    <!--Sources to shooping cart: 
+
+    https://dev.to/wenglin1/simple-shopping-cart-with-js-json-jdp
+    
+    https://designmodo.com/shopping-cart-ui/ 
+  
+    https://medium.com/sharing-and-learning/creating-a-shopping-cart-with-vanilla-javascript-23b2e4d8e1ef  
+    https://github.com/vckhanhitiu1/ShoppingCartWithVanillaJavascript
+    
+    https://www.youtube.com/watch?v=YeFzkC2awTM Use this link for video tutoria.=l
+  
+   -->
+
+
+<footer>
+  <p>Coded By: Mssamcodes</p>
+</footer>
+
+
+    <script>
+
+// Side Navbar Beings
+       function openNav() {
+            document.getElementById("mySidenav").
+            style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").
+            style.width = "0";
+        }
+// Side Navbar Ends
+
+//Popup Form with Button box BEGINS
+ 
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+//Popup Form with Button box ENDS    
+
+
+
+    </script>
+
+</body>
+</html>
