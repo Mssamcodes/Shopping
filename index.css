@@ -2,149 +2,297 @@
 
 /* SIDEBAR CHECKOUT ENDS*/
 
-
-
-
-
-/* Flex Container BEGINS */
-.flex{
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-}
-
-.flex > section{
-  display: contents;
-    align-items:center;
-    display: flex;
-    flex: 1 1 0;
-    flex-direction: column;
-    text-align: center;
-    position: relative;
-    top: 50px; /*moved grid to the bottom*/
-    max-width: 400px;
-}
-  
-.flex > section > p{
-    flex-grow: 1;
-}
-
-/*This rule ist just because of the responsive images */
-@media (max-width: 160px){
-    .flex > section {
-        max-width: 250px;
-    }
-}
-
-.flex ul{
-    display: flex;
-    justify-content: space-between;
-}
-
-.flex aside{
-    width: 100%
-}
-
-/* Basic styling for UI */
-body {
-    font-family: 16px 'Open Sans Condensed', sans-serif;
-    margin: 0;
-  }
-
-  img{
-      width: 380px;
-      border-radius: 4px;
-      cursor: pointer;
-  }
-
-  @media (max-width: 1300px){
-      img{
-          width: 250px;
-      }
-  }
-
-  img:hover{
-    -moz-box-shadow: 0 0 10px #ccc;
-      -webkit-box-shadow: 0 0 10px #ccc;
-      box-shadow: 0 0 10px #ccc;
-  }
-
-  .product-name{
-    font-size: 14px;
-    color: black;
-    position: relative;
-    left: -95px;
-    bottom: -10px;
-  }
-
-  .product-price{
-    font-size: 14px;
-    color: darkslategray;
-    position: relative;
-    top: 1px;
-  }
-  
-.flex > section {
-background: white;
-padding: 1em;
-margin: 0.5em;
-border-radius: 4px;
-}  
-
-.btn{
-    background: whitesmoke;
-    color: black;
-    background-repeat: no-repeat;
-    background-position: 2em 50%;
-    background-size: 2em;
-    border: 0;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 13px;
-    display: flex;
-    justify-content: center;
-    padding: 1.5em 3em;
-    padding-left: 2.5em; /*moves text inside of button */
-    text-transform: block;
-    width: 400px;
-}
-
-.btn:hover{
-background-color:gainsboro;
-background-size: 3em;
-background-position: 1.5em 50%;
-}
-
-
-form.add-to-cart div {
-  position: relative;
-	text-align: center;
-  top: -20px;
-  left: -146px;
-  color: darkslategray;
-}
-
-form input.qty {
-	width: 30px;
-	border: 1px solid #eee;
+html,body{
+  width: 100%;
+  height: auto;
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
   font-family:'Open Sans Condensed', sans-serif;
-	color: black;
-	border-radius: 3px;
-	margin-left: 0.4em;
-  font-size: 14px;
 }
 
 
-.flex ul{
-    list-style-type: none;
-    padding: 0;
+
+#header1{
+  display: flex;
+  justify-content:center;
+  position: relative;
+  top: 35px;
+
 }
 
-.flex li {
-    color: darkslategray;
-    font-weight: 2;
-    padding: 0.3em 0.6em;
-    border-radius: 1em;
+
+#header2{
+position: relative;
+top: -50px;
+right:-1080px;
+}
+
+#header2:hover::after{
+  color:pink;
+}
+
+.sidenav{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+  .sidenav a { /*text inside of navbar*/
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color:rgb(222, 229, 233);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+span{ /*to move nav bar open tab*/
+  position: relative;
+  right: -30px;
+  color:#696969;
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/*Carousel slider BEGINS UPDATE*/
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
   }
-/* Flex Container ENDS */
+
+#myCarousel {
+    width: 100%;
+}
+.carousel-control {
+    margin-top: 20px;
+}
+.carousel-inner .item {
+    width: 100%;
+    height: 700px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.carouselslide{
+  position: relative;
+  top: -60px;
+}
+
+
+.carousel-indicators{ /*to move slick nav dots*/
+  position: absolute;
+  top: 570px;
+  color: red;
+}
+
+
+
+/* Source for stock photos, credit later: https://unsplash.com/s/photos/jewerly
+<img src="pics" */
+.ad0 {
+    background: url(../jewleryphotos/j3.jpg) no-repeat center center fixed; 
+
+}
+.ad1 {
+    background: url(../jewleryphotos/j1.jpg) no-repeat center center fixed; 
+}
+.ad2 {
+    background: url(../jewleryphotos/j2.jpg) no-repeat center center fixed;  
+}
+
+.ad3 {
+    background: url(../jewleryphotos/j0.jpg) no-repeat center center fixed; 
+}
+
+.ad4 {
+    background: url(../jewleryphotos/j4.jpg) no-repeat center center fixed;
+}
+
+.fa{
+position: relative;
+display: flex;
+color: #282828;
+font-size: 500px;
+position: relative;
+top: 35px;
+right: -35px;
+padding: 15px;
+}
+
+/*CSS for the Popup-Form BEGINS */
+
+form-container h1{
+font-family:'Open Sans Condensed', sans-serif;
+position: relative;
+top: -50px;
+}
+
+.form-container p{
+font-family:'Open Sans Condensed', sans-serif;
+}
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color:black;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 200px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 110px;
+  left: 250px;
+  height: 70px;
+  width: 200px;
+  font-size: 16px;
+}
+
+.open-button:hover{
+background-color:#202020;
+}
+
+.close-btn{
+-webkit-appearance: none;
+position: relative;
+top: -260px;
+right: -120px;
+background-color: transparent;
+border: none;
+size: 50px;
+font-size: 30px;
+cursor: pointer;
+}
+
+ .form-popup{
+  display: none;
+  position: absolute;
+  text-align: center; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 2px;
+  overflow-x: hidden;
+  border: 3px solid #f1f1f1;
+}
+
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 600px;
+  padding: 30px;
+  background-color: white;
+  overflow-y: auto
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  position: absolute;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  outline: none;
+  border: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container h1{
+    position: relative;
+    top: 30px;
+}
+
+.form-container p{
+    position: relative;
+    top: 40px;
+}
+
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.close-btn:hover{
+    color: silver;
+}
+
+
+#email{
+  border: none;
+  position:relative;
+  right: -20px;
+  top: 30px;
+  font-size: 15px;
+}
+
+
+hr{
+  border: solid 1px;; 
+  position: relative;
+  top: -70px;
+  right: 40px;
+  width: 180px;
+}
+
+.submit-btn{
+  position: relative;
+  right: -100px;
+  top: -35px;
+  width: 70px;
+  font-size: 12px;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+}
+
+.submit-btn:hover{
+background-color:#202020;
+
+}
+
+/*CSS for the Popup-Form ENDS */
